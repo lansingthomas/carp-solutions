@@ -1,0 +1,4 @@
+Mezzanine==1.4.16
+
+# heroku apps including pyscopg, dj-static, dj-database-url, gunicorn.
+django-toolbelt==0.0.1
