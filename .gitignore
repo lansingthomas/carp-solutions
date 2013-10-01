@@ -1,5 +1,7 @@
 /.venv
 /site-packages
 *.pyc
-static
+static/*
+!static/.gitdirectory
+!static/media/.gitdirectory
 
