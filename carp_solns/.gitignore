@@ -4,4 +4,8 @@
 .DS_Store
 .coverage
 local_settings.py
-/staticfiles
+/staticfiles/*
+/staticfiles/media/*
+!/staticfiles/media
+!/staticfiles/.gitdirectory
+!/staticfiles/media/.gitdirectory
