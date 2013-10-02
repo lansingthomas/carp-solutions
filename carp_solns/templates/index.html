@@ -1,28 +1,184 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n staticfiles %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% trans "Home" %}{% endblock %}
+
+{% block extra_head %}
+<style>
+#homepage-jumbotron {
+    background-image: url("{% static 'img/arches.png' %}");
+}
+
+.container .row img {
+    width: 95%;
+}
+
+</style>
+{% endblock %}
 
 {% block breadcrumb_menu %}
 <li class="active">{% trans "Home" %}</li>
 {% endblock %}
 
+{% block pre_main %}
+
+<div class="jumbotron" id="homepage-jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{% static "img/carp1_A.png" %}" alt="Carp Solutions hard at work" class="img-rounded" id="jumbotron-main-img"/>
+            </div>
+            <div class="col-lg-6 text-center">
+                <h1>Carp Solutions</h1>
+                <h2>Organic Fish Fertilizer</h2>
+                <p><a class="btn btn-primary btn-lg">Buy Now &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
 {% block main %}
-{% blocktrans %}
-<h2>Congratulations!</h2>
-<p>
-Welcome to your new Mezzanine powered website.
-Here are some quick links to get you started:
-</p>
-<ul>
-    <li><a href="/admin/">Log in to the admin interface</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
-</ul>
-{% endblocktrans %}
+
+<!-- Main Content -->
+<div class="container">
+
+    <div class="row" id="tagline">
+        <div class="col-md-12">
+            <h2 class="text-center"><em>Great For Your Plants, Great For Your Planet</em></h2>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row" id="features-pitch">
+        <div class="feature text-center col-md-4">
+            <h3>Feature 1</h3>
+            <img src="{% static 'img/carp2_A.png' %}" class="img-circle" />
+            <p>
+            Carp Solutions LLC is the Idaho manufacturer of liquid Hydrolysate Organic 
+            Fertilizer derived from invasive European Carp. 
+            </p>
+        </div>
+        <div class="feature text-center col-md-4">
+            <h3>Feature 2</h3>
+            <img src="{% static 'img/carp2_A.png' %}" class="img-circle" />
+            <p>
+            Carp Solutions LLC is the Idaho manufacturer of liquid Hydrolysate Organic 
+            Fertilizer derived from invasive European Carp. 
+            </p>
+        </div>
+        <div class="feature text-center col-md-4">
+            <h3>Feature 3</h3>
+            <img src="{% static 'img/carp2_A.png' %}" class="img-circle" />
+            <p>
+            Carp Solutions LLC is the Idaho manufacturer of liquid Hydrolysate Organic 
+            Fertilizer derived from invasive European Carp. 
+            </p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row" id="mission-statement">
+        <div class="col-md-8">
+            <p class="lead">
+            Carp Solutions LLC is the Idaho manufacturer of liquid Hydrolysate Organic 
+            Fertilizer derived from invasive European Carp. 
+            </p>
+            
+            <p>
+            We are fisherman with a healthy 
+            solution to the European Carp problem. We are committed to the cleanup of Idaho’s 
+            lakes and rivers and we do our part by taking Idaho’s invasive European Carp and 
+            converting them to an all natural, OMRI certified Organic fertilizer. 
+            </p>
+
+            <p>
+            The job is messy, but it is great for our planet, and we are happy to do it.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h4>Fertilizer Composition</h4>
+            <table class="table-striped">
+                <tr>
+                    <th>Property</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>pH</td>
+                    <td>5.07</td>
+                </tr>
+                <tr>
+                    <td>EC <small>mmhos (SS)</small></td>
+                    <td>5.02</td>
+                </tr>
+                <tr>
+                    <td>Specific Gravity <small>gms/cm</small></td>
+                    <td>1.03</td>
+                </tr>
+                <tr>
+                    <td>Pounds per Gallon</td>
+                    <td>8.61</td>
+                </tr>
+            </table>
+            {% comment %}
+            <table class="table-striped">
+                <tr>
+                    <th>Component</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>    
+                    <td>Nitrogen</td>       
+                    <td>2.85</td>       
+                </tr>
+                <tr>    
+                    <td>Phosphate</td>      
+                    <td>1.60951</td>    
+                </tr>
+                <tr>    
+                    <td>Potash</td>
+                    <td>0.25669</td>
+                </tr>
+                <tr>
+                    <td>Calcium</td>
+                    <td>0.48215</td>
+                </tr>
+                <tr>
+                    <td>Magnesium</td>
+                    <td>0.03529</td>
+                </tr>
+                <tr>
+                    <td>Sulfur</td>
+                    <td>0.09677</td>
+                </tr>
+                <tr>
+                    <td>Zinc</td>
+                    <td>0.00443</td>
+                </tr>
+                <tr>
+                    <td>Copper</td>
+                    <td>0.00023</td>
+                </tr>
+                <tr>
+                    <td>Manganese</td>
+                    <td>0.00059</td>
+                </tr>
+                <tr>
+                    <td>Iron</td>
+                    <td>0.01624</td>
+                </tr>
+                <tr>
+                    <td>Boron</td>
+                    <td>0.00016</td>
+                </tr>
+            </table>
+            {% endcomment %}
+            <p><a href="{% static 'doc/fertilizer-test.pdf' %}">See full report</a></p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
