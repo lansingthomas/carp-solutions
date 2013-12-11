@@ -1,7 +1,7 @@
 {% load mezzanine_tags %}
 
 {% if form_for_fields.non_field_errors %}
-<div class="control-group error non-field-errors">
+<div class="form-group error non-field-errors">
     {% for error in form_for_fields.non_field_errors %}
     <span class="help-inline">{{ error }}</span>
     {% endfor %}
@@ -17,7 +17,7 @@
 {% if field.is_hidden %}
 {{ field }}
 {% else %}
-<div class="control-group input_{{ field.id_for_label }} {{ field.field.type }}
+<div class="form-group input_{{ field.id_for_label }} {{ field.field.type }}
     {% if field.errors %} error{% endif %}">
     <label class="control-label" for="{{ field.auto_id }}">
         {{ field.label }}
