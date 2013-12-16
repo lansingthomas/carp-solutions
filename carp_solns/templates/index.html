@@ -14,6 +14,13 @@
   width: 95%;
 }
 
+#homepage-jumbotron .left-side h4 {
+  padding-bottom: 10px;
+}
+#homepage-jumbotron .left-side, #homepage-jumbotron .right-side  {
+  padding-top: 30px;
+}
+
 </style>
 {% endblock %}
 
@@ -26,19 +33,17 @@
 <div class="jumbotron" id="homepage-jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
-        <ul>
-          <li>Great for organic plant growth</li>
-          <li>Low odor - safe to handle</li>
-          <li>Made from whole carp</li>
-          <li>No added enzymes - no nutrients removed</li>
-          <li>Made locally in Idaho</li>
-        </ul>
+      <div class="left-side text-center col-lg-3">
+          <h4>Great for organic plant growth</h4>
+          <h4>Low odor - safe to handle</h4>
+          <h4>Made from whole carp</h4>
+          <h4>No added enzymes - no nutrients removed</h4>
+          <h4>Made locally in Idaho</h4>
       </div>
       <div class="col-lg-6">
         <img src="{% static "img/Carpe_Carpum_full_color.png" %}" class="img-rounded" id="jumbotron-main-img"/>
       </div>
-      <div class="col-lg-3">
+      <div class="right-side col-lg-3">
         <img src="{% static "img/fertilizer_bottles.jpg" %}" class="img-rounded" />
       </div>
     </div>
@@ -83,11 +88,6 @@
 
   <hr/>
 
-  <div class="row" id="infographic">
-    <div class="col-md-12 text-center">
-      <img src="{% static 'img/Laura_infographic1.jpg' %}" class="img-rounded" />
-    </div>
-  </div>
 
   <hr/>
 
@@ -95,7 +95,7 @@
   <div class="row" id="mission-statement">
     <div class="col-md-8">
       <p class="lead">
-      Carpe Carpum is the Idaho manufacturer of liquid Hydrolysate Organic 
+      Carp Solutions LLC is the Idaho manufacturer of Carpe Carpum liquid Hydrolysate Organic 
       Fertilizer derived from invasive European carp. 
       </p>
 
@@ -130,58 +130,6 @@
           <td>0.25%</td>
         </tr>
       </table>
-      {% comment %}
-      <table class="table-striped">
-        <tr>
-          <th>Component</th>
-          <th>Percentage</th>
-        </tr>
-        <tr>    
-          <td>Nitrogen</td>       
-          <td>2.85</td>       
-        </tr>
-        <tr>    
-          <td>Phosphate</td>      
-          <td>1.60951</td>    
-        </tr>
-        <tr>    
-          <td>Potash</td>
-          <td>0.25669</td>
-        </tr>
-        <tr>
-          <td>Calcium</td>
-          <td>0.48215</td>
-        </tr>
-        <tr>
-          <td>Magnesium</td>
-          <td>0.03529</td>
-        </tr>
-        <tr>
-          <td>Sulfur</td>
-          <td>0.09677</td>
-        </tr>
-        <tr>
-          <td>Zinc</td>
-          <td>0.00443</td>
-        </tr>
-        <tr>
-          <td>Copper</td>
-          <td>0.00023</td>
-        </tr>
-        <tr>
-          <td>Manganese</td>
-          <td>0.00059</td>
-        </tr>
-        <tr>
-          <td>Iron</td>
-          <td>0.01624</td>
-        </tr>
-        <tr>
-          <td>Boron</td>
-          <td>0.00016</td>
-        </tr>
-      </table>
-      {% endcomment %}
       <p><a href="{% static 'doc/fertilizer-test.pdf' %}">See full report</a> for additional nutrients.</p>
     </div>
   </div>
