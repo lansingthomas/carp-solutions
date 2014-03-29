@@ -1,6 +1,7 @@
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.views.generic.base import TemplateView
 
 from mezzanine.core.views import direct_to_template
 
@@ -29,6 +30,9 @@ urlpatterns = patterns("",
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
+    # ROBOTS FILE
+    url(r'^robots\.txt/$', TemplateView.as_view(template_name='robots.txt',
+                                                    content_type='text/plain')),
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
     # This pattern gives us a normal ``Page`` object, so that your
