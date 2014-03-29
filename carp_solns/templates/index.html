@@ -1,3 +1,18 @@
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48770108-1']);
+  _gaq.push(['_setDomainName', 'carpsolutions.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 {% extends "base.html" %}
 {% load i18n staticfiles %}
 
@@ -39,13 +54,13 @@
           <h4>Made from whole carp</h4>
           <h4>No enzymes added - no nutrients removed</h4>
           <h4>Made locally in Idaho</h4>
-          <h4>Pending ISDA Organic Certification</h4>
+          <h4>ISDA Organic Certified</h4>
       </div>
       <div class="col-xs-6">
-        <img src="{% static "img/Carpe_Carpum_full_color.png" %}" class="img-rounded" id="jumbotron-main-img"/>
+        <img src="{% static "img/Carpe_Carpum_full_color1.png" %}" class="img-rounded" id="jumbotron-main-img"/>
       </div>
       <div class="right-side col-xs-3">
-        <img src="{% static "img/fertilizer_bottles.jpg" %}" class="img-rounded" />
+        <img src="{% static "img/White_bottle_Carpe_Carpum.jpg" %}" class="doodlepoodle img-rounded" />
         <h4>$30 - Gallon $10 - Quart, plus tax</h4>
       </div>
     </div>
@@ -104,7 +119,7 @@
       We are fisherman with a healthy 
       solution to the European carp problem. We are committed to the cleanup of Idaho’s 
       lakes and rivers and we do our part by taking Idaho’s invasive European carp and 
-      converting them to an all natural, ISDA pending certified Organic fertilizer. 
+      converting them to an all natural, ISDA certified Organic fertilizer. 
       </p>
 
       <p>
@@ -120,7 +135,7 @@
         </tr>
         <tr>
           <td>Nitrogen</td>
-          <td>2.85%</td>
+          <td>3%</td>
         </tr>
         <tr>
           <td>Phosphate</td>
@@ -131,7 +146,7 @@
           <td>0.25%</td>
         </tr>
       </table>
-      <p><a href="{% static 'doc/fertilizer-test.pdf' %}">See full report</a> for additional nutrients.</p>
+      <p><a href="{% static 'doc/Lab_Results_no_address.pdf' %}">See full report</a> for additional nutrients.</p>
     </div>
   </div>
 </div>
